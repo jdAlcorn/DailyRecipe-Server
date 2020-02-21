@@ -21,3 +21,12 @@ CREATE TABLE DailyRecipe.Recipes (
 	PRIMARY KEY (RecipeId),
 	FOREIGN KEY (PictureId) REFERENCES RecipePictures(PictureId)
 );
+
+CREATE TABLE DailyRecipe.LoginInfo (
+	LoginInfoId int NOT NULL AUTO_INCREMENT,
+	HashedPassword varchar(255),
+
+	PRIMARY KEY (LoginInfoId)
+);
+
+INSERT INTO DailyRecipe.LoginInfo (HashedPassword) VALUES ("$2y$10$3aJ7NtfLjR8PuE4Cjpi1zelBvNFllL1eN/Aw.asPz/PaU7kD4WR26");
